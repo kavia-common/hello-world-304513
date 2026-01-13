@@ -1,25 +1,10 @@
 {
   "name": "weather-app-mock-api",
   "version": "0.1.0",
-  "description": "Minimal Node/Express weather app scaffold with mock API responses.",
+  "description": "Python/FastAPI mock weather app scaffold with mock API responses.",
   "private": true,
-  "main": "src/server.js",
-  "type": "commonjs",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "lint": "eslint .",
-    "format": "prettier --write ."
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "eslint": "^9.8.0",
-    "globals": "^15.9.0",
-    "nodemon": "^3.1.4",
-    "prettier": "^3.3.3"
+    "start": "python main.py",
+    "dev": "python main.py"
   }
 }

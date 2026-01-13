@@ -1,27 +1,35 @@
-# Weather App (Mock API)
+# Weather App (Mock API) — Python/FastAPI
 
-A minimal Node/Express backend scaffolded as a basic weather app. It serves mock weather and forecast data (no external API keys required yet).
+A minimal **Python/FastAPI** backend scaffolded as a basic weather app. It serves **mock** weather and forecast data (no external API keys required yet).
 
 ## Requirements
-- Node.js 18+ recommended
+- Python 3.11+ recommended
 
 ## Install
+Create and activate a virtual environment (recommended), then install dependencies:
+
 ```bash
-npm install
+python -m venv .venv
+# macOS/Linux
+source .venv/bin/activate
+# Windows (PowerShell)
+# .venv\Scripts\Activate.ps1
+
+pip install -r requirements.txt
 ```
 
 ## Run (preview uses port 3001)
-Production-like:
+The server listens on **http://localhost:3001** by default.
+
 ```bash
-npm start
+python main.py
 ```
 
-Dev (auto-reload):
-```bash
-npm run dev
-```
+You may also override the port via environment variable:
 
-The server listens on **http://localhost:3001**.
+```bash
+PORT=3001 python main.py
+```
 
 ## API
 
@@ -49,8 +57,14 @@ Example:
 curl "http://localhost:3001/api/forecast?city=London&days=5"
 ```
 
-## Tooling
-- Lint: `npm run lint`
-- Format: `npm run format`
+## Tooling (suggested)
+- Lint/format (ruff):
+  ```bash
+  pip install ruff
+  ruff check .
+  ruff format .
+  ```
 
-Note: linting/formatting are provided for development; they do not affect runtime.
+Notes:
+- No external weather API integration is implemented yet; responses are mock/deterministic.
+- CORS is enabled for all origins to match the previous Express scaffold.
