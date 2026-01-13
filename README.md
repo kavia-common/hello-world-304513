@@ -31,6 +31,10 @@ You may also override the port via environment variable:
 PORT=3001 python main.py
 ```
 
+## Documentation
+- [Product Requirements Document (PRD)](docs/PRD.md)
+- [Architecture](docs/ARCHITECTURE.md)
+
 ## API
 
 ### Health
